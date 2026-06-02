@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://viaid443pi84"]
+
+[ext_resource type="Script" uid="uid://c3u2n2617xatn" path="res://data/scripts/arrow.gd" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://by0g2wv7rjmjc" path="res://data/ressources/arrow_head.tres" id="2_sugp2"]
+[ext_resource type="Texture2D" uid="uid://bts64jgqxw7t1" path="res://data/ressources/textures/atlas_arrow.png" id="3_dkjo2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkjo2"]
+atlas = ExtResource("2_sugp2")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sugp2"]
+atlas = ExtResource("3_dkjo2")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yeeyf"]
+atlas = SubResource("AtlasTexture_sugp2")
+region = Rect2(256, 0, 256, 256)
+
+[node name="Main" type="Node2D" unique_id=1322562700]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=529846832]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=502822301]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TargetingArrow2d" type="Node2D" parent="CanvasLayer/Control" unique_id=1202177263]
+script = ExtResource("1_0wfyh")
+head_texture = SubResource("AtlasTexture_dkjo2")
+head_texture_offset = Vector2(0, -128)
+nodes_texture = SubResource("AtlasTexture_yeeyf")
+nodes_texture_offset = Vector2(0, -128)
+head_scale = Vector2(0.6, 0.6)
+nodes_scale = Vector2(0.3, 0.3)
+metadata/_custom_type_script = "uid://d03ktl2s01no5"
