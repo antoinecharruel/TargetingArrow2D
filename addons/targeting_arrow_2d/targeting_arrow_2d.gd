@@ -54,7 +54,7 @@ func process_arrow(target_position: Vector2) -> void:
 	if _nodes.is_empty():
 		load_sprites()
 		
-	var bezier_positions: Array = _compute_bezier_position(target_position)
+	var bezier_positions: Array = _compute_bezier_positions(target_position)
 	
 	for i in range(total_nodes):
 		if _nodes[i] == null:
@@ -64,7 +64,7 @@ func process_arrow(target_position: Vector2) -> void:
 		_apply_node_xform(i, bezier_positions, t_scale)
 		
 		
-func _compute_bezier_position(target_position) -> Array:
+func _compute_bezier_positions(target_position) -> Array:
 	var p0: Vector2 = global_position
 	var p3: Vector2 = target_position
 	var p1: Vector2 = p0 + (p3 - p0) * control_point_factors_p1
