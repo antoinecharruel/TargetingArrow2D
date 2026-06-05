@@ -63,3 +63,7 @@ func _input(event) -> void:
 [![](/docs/preview/screenshot_001.png)]()
 
 [![](/docs/preview/screenshot_002.png)]()
+
+## References (Videos & Websites)
+
+- LoBeyJon Game Dev (2020) Game Dev Tutorial: How to recreate the targeting arrow in Slay the Spires. https://www.youtube.com/watch?v=FpuH303FYYU.
